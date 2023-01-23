@@ -1,5 +1,10 @@
 # Changes
 
+## v0.9.0 - 23/1/23
+
+* Full fork with added support for node-mapnik v4.x.x
+* Add a hack to work around mapnik-reference incompatibility 
+
 ## v0.8.2 - 7/12/18
 
 * Delegate `getInfo()` to `tilelive-bridge` to prevent data leakage

@@ -9,7 +9,9 @@ var _ = require("underscore"),
     Bridge = require("@mapbox/tilelive-bridge"),
     carto = require("carto"),
     mapnik = require("mapnik"),
-    mapnikref = require('mapnik-reference').load(mapnik.versions.mapnik),
+    // FIXME: Upstream only supports versions up to 3.0.22. This still seems to work for us though.
+    mapnikVersion = mapnik.versions.mapnik === '3.1.0' ? '3.0.22' : mapnik.versions.mapnik,
+    mapnikref = require('mapnik-reference').load(mapnikVersion ),
     yaml = require("js-yaml");
 
 var tm = {};
@@ -171,7 +173,7 @@ var TMSource = function(uri, callback) {
   if (uri.yaml) {
     return self.init(uri, uri.yaml, callback);
   }
-    
+
   uri.pathname = path.resolve(uri.hostname + uri.pathname);
   uri.hostname = "";
 

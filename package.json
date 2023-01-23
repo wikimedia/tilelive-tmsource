@@ -1,6 +1,6 @@
 {
   "name": "tilelive-tmsource",
-  "version": "0.8.2",
+  "version": "0.9.0",
   "description": "A tilelive.js source for tmsource:// URIs",
   "contributors": [
     "TM2 Contributors",
@@ -8,17 +8,17 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mojodna/tilelive-tmsource.git"
+    "url": "https://github.com/wikimedia/tilelive-tmsource.git"
   },
   "license": "BSD-2-Clause",
   "dependencies": {
     "@mapbox/tilelive-bridge": "^3.0.0",
-    "js-yaml": "^3.2.5",
-    "carto": "^1.0.1",
-    "underscore": "^1.7.0",
-    "mapnik-reference": "^8.7.0"
+    "carto": "^1.2.0",
+    "js-yaml": "^3.14.1",
+    "mapnik-reference": "^8.10.0",
+    "underscore": "^1.13.6"
   },
   "peerDependencies": {
-    "mapnik": "^3.5.0"
+    "mapnik": "3.x || 4.x"
   }
 }
